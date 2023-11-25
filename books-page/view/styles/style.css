@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+nav li {
+    list-style: none;
+    border-right: 1px solid black;
+    padding-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 80px;
+    padding-right: 20px;
+}
+/* COM 3 FOR BOOKS*/
+
+.tbl-books {
+    height: 550px; /* Adjust the height as needed */
+    overflow-y: scroll; /* Enable vertical scrollbar */
+    display: block; /* Optional: Prevent table from expanding to full width */
+    width: 100%;
+    border: 1px solid black;
+}
+
+/* Optional: Style for the table rows */
+.tbl-books tr {
+    border-bottom: 1px solid #ccc;
+}
+
+/* Optional: Style for the table cells */
+.tbl-books td {
+    padding: 10px;
+}
+
+/* COM 3 FOR PAGINATION*/
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    color: #333;
+    border-radius: 5px;
+}
+
+.pagination a.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
