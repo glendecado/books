@@ -76,14 +76,30 @@ class controller
                 include("./view/contents/bookDetail.php"); //because you include bookDetails, you can use now $books in your view
                 break;
 
-                //delete a records
+
+
+                //ask to delete
             case '7':
+                $id = isset($_GET['ID']) ? $_GET['ID'] : "";
+                echo "<script type='text/javascript'>
+                        let con = confirm('Record Delete');
+                        if (con) {
+                            window.location.href = 'index.php?command=7.1&&ID=" . $id . "';
+                        } else {
+                            window.location.href = 'index.php?command=3';
+                        }
+                    </script>";
+
+                break;
+                //delete records
+            case '7.1':
                 $id = isset($_GET['ID']) ? $_GET['ID'] : ""; //getting the ID from view
                 $result = $this->model->deleteBook($id);
 
-                echo "<script type='text/javascript'>alert('Record Deleted');
+                echo "<script type='text/javascript'>alert('Record deleted');
                         window.location='index.php?command=3';
                         </script>";
+
                 break;
 
                 //edit books
