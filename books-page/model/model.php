@@ -2,9 +2,7 @@
 //of of the queries relating to database will be writen on this class
 class model
 {
-    public $cnt = null;
-    public $search = null;
-    public $searchEntity = null;
+
     public $db = null;
 
     public function __construct()
